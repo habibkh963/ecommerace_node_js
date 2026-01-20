@@ -38,4 +38,11 @@ module.exports = {
 
     // ✅ الصلاحيات
     NO_PERMISSION: "ليس لديك صلاحية لتنفيذ هذا الإجراء",
+    ADDED_TO_FAVORITES: "تمت الإضافة إلى المفضلة",
+    REMOVED_FROM_FAVORITES: "تمت الإزالة من المفضلة",
+    CART_EMPTY: "سلة التسوق فارغة",
+    ITEM_ADDED_TO_CART: "تمت إضافة المنتج إلى السلة",
+    ITEM_REMOVED_FROM_CART: "تمت إزالة المنتج من السلة",
+
+
 };

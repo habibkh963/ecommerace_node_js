@@ -10,6 +10,8 @@ const productRoutes = require("./routes/product.routes");
 app.use("/api/products", productRoutes);
 const categoriesRoutes = require("./routes/categories.routes");
 app.use("/api/category", categoriesRoutes);
+const cartController = require("./routes/cart.routes");
+app.use("/api/cart", cartController);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/api/auth", authRoutes);

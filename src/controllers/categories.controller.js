@@ -35,7 +35,11 @@ exports.updateCategory = async (req, res) => {
             return res.status(404).json({ message: req.t.CATEGORY_NOT_EXISTS });
         }
 
-        await category.update({ name_en, name_ar });
+        const updates = {};
+
+        if (name_en !== undefined) updates.name_en = name_en;
+        if (name_ar !== undefined) updates.name_ar = name_ar;
+        await category.update(updates);
 
         res.status(200).json(category);
     } catch (err) {

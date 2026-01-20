@@ -38,4 +38,10 @@ module.exports = {
 
     // ✅ Permissions
     NO_PERMISSION: "You don't have permission to perform this action",
+    CART_EMPTY: "Your cart is empty",
+    ITEM_ADDED_TO_CART: "Item added to cart",
+    ITEM_REMOVED_FROM_CART: "Item removed from cart",
+    ADDED_TO_FAVORITES: "Added to favorites",
+    REMOVED_FROM_FAVORITES: "Removed from favorites",
+
 };
