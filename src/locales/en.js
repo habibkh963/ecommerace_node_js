@@ -3,6 +3,7 @@ module.exports = {
     SERVER_ERROR: "Something went wrong",
     NOT_FOUND: "Not found",
     SUCCESS: "Success",
+    ORDER_CREATED: "ORDER CREATED",
 
     // ✅ Auth
     EMAIL_EXISTS: "Email already exists",

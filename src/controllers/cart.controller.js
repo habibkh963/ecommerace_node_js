@@ -45,3 +45,43 @@ exports.addToCart = async (req, res) => {
         res.status(500).json({ message: req.t.SERVER_ERROR });
     }
 };
+
+
+exports.getCart = async (req, res) => {
+    try {
+        const userId = req.user.id;
+
+        let cart = await Cart.findOne({
+            include: [{
+                model: CartItem,
+                as: "cart_items",
+                include: [
+                    {
+                        model: Product,
+                        as: "product",
+
+                        // attributes: ["id", "name_en", "name_ar"],
+                    }
+                ]
+                // attributes: ["id", "name_en", "name_ar"],
+            }],
+            where: { user_id: userId }
+        });
+
+        if (!cart) {
+
+            res.status(500).json({ message: req.t.CART_EMPTY });
+
+
+        }
+
+
+        return res.status(200).json({
+            msg: req.t.SUCCESS,
+            data: cart,
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: req.t.SERVER_ERROR });
+    }
+};

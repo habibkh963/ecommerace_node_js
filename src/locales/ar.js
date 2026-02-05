@@ -43,6 +43,7 @@ module.exports = {
     CART_EMPTY: "سلة التسوق فارغة",
     ITEM_ADDED_TO_CART: "تمت إضافة المنتج إلى السلة",
     ITEM_REMOVED_FROM_CART: "تمت إزالة المنتج من السلة",
+    ORDER_CREATED: "تمت إنشاء الطلب بنجاح ",
 
 
 };

@@ -139,6 +139,7 @@ exports.getProducts = async (req, res) => {
                     include: [
                         {
                             model: Cart,
+                            as: "cart",
                             attributes: [],
                         },
                     ],
